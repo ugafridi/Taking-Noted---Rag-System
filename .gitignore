@@ -1,0 +1,35 @@
+# Secrets - never commit these
+.env
+.env.*
+!.env.example
+groq_key.txt
+*api_key*.txt
+
+# Offline/cloud deploy bundle: has a plaintext key and a 90MB model
+deploy/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Generated FAISS index and model artifacts (rebuild with: python -m rag.ingest)
+backend/data/index/
+*.npy
+*.index
+*.joblib
+*.safetensors
+
+# Frontend
+node_modules/
+frontend/dist/
+.vite/
+
+# Local verification screenshots
+ui_*.png
+
+# OS
+.DS_Store
+Thumbs.db
